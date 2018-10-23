@@ -14,20 +14,15 @@
             <a class="nav-link" [routerLink]="['home']">Home</a>
           </li>     
           <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link" [routerLink]="['peliculas']">Peliculas</a>
+            <a class="nav-link" [routerLink]="['peliculas']">Películas</a>
           </li>
-          <li class="nav-item" routerLinkActive="active">
-              <!-- <a class="nav-link" [routerLink]="['horarios']">Horarios</a> -->
-          </li>
-          <li class="nav-item" routerLinkActive="active">
-              <!-- <a class="nav-link" [routerLink]="['contacto']">Contacto</a> -->
-          </li>
+           <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['about']">About</a>
+           </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" aria-label="Search">
-          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar</button>
+          <input class="form-control mr-sm-2" type="text" placeholder="Buscar Película" (keyup.enter)="buscarPeli(buscarTexto.value)" #buscarTexto>         
+          <button (click)="buscarPeli(buscarTexto.value)" class="btn btn-outline-primary my-2 my-sm-0" type="button">Buscar</button>
       </form>
-
-
   </div>
 </nav>

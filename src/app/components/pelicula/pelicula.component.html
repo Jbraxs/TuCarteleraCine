@@ -1,0 +1,31 @@
+<h1>{{ pelicula.nombre | uppercase }}</h1>
+<hr>
+
+<div class="row">
+  
+  <div class="col-md-4">
+
+    <img [src]="pelicula.img" class="img-fluid" [alt]="pelicula.nombre">
+    <br><br>
+    <a [routerLink]="['/peliculas']" class="btn btn-outline-danger btn-block">Volver</a>
+  </div>
+
+  <div class="col-md-8">
+    <h3> <small> Fecha de Estreno - {{ pelicula.fecha }} </small></h3>
+    <hr>
+    <p>
+      {{ pelicula.bio }}
+      <a href="{{ pelicula.wiki }}">Wikipedia</a> 
+    </p>
+    <p>
+      Director: {{ pelicula.director }}
+    </p>
+    <hr>
+    <p>
+      Duración: {{ pelicula.duracion }}
+    </p>
+    <hr>
+  </div>
+
+
+</div>

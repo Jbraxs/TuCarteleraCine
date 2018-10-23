@@ -1,0 +1,8 @@
+<h1 class="animated fadeIn"> Estrenos <small> de Octubre </small> </h1>
+<hr>
+
+<div class="card-columns">
+
+  <app-peli [pelicula]="pelicula" [index]="i" *ngFor="let pelicula of peliculas; let i = index"></app-peli>
+
+</div>
